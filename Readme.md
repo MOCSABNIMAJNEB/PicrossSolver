@@ -1,0 +1,9 @@
+# What is a Picross?
+Picross is a type of puzzle. The puzzle takes the form of a nxm grid of cells. Each cell can either be unknown, 1, or 0. The goal of the game, similiar to minesweeper, is to mark each cell as a 1 or zero, leaving no more UNK cells on the board. The user is presented with information for each row and column that indicates the number of runs (e.g. consecutive 1s or 0s) there are in that column or row. By working backwards from those, the user can determine which cells can be marked, and then iterate given the new board state. Lets start with a simple example: Lets say you have a 5x5 board, the columns are labeled a-e and the rows are labeled 0-4. Lets say that column a and row 0 both have '0' in the margin. That would indicate that there are _no_ cells in this row to be flagged, so all of the cells in column A and all the cells in Row 0 could be marked with as 0. Now, for a second example, lets say that column A has a 1. that means there is a single 1 in that row. We know that because we only see a single digit that there are only two valid placements for this 1, either preceding or following a run of 0s, so it must either be in the first or last cell. We can cross reference then Row 0 and Row 4. For the sake of arguement, lets assume that Row 0 has 0 in the margin, and Row 4 has 1 in the margin, we now know unambiguously that the 1 is in cell a4. The rest of the puzzle logic follows by induction.
+
+# Examples
+Picross is an example of a larger form of puzzles, known as Nonograms, which you can read about here: https://en.wikipedia.org/wiki/Nonogram
+
+if you're interested in just getting familiar with the game, and you have a nintendo switch, try these out:
+https://www.nintendo.com/us/store/products/murder-by-numbers-switch/
+https://www.mariowiki.com/Mario's_Super_Picross (via Game Boy Emulator on Switch Store)
